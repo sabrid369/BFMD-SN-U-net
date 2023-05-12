@@ -1,9 +1,8 @@
 import torch
 import torch.nn as nn
-
 class DoubleConv_BFMD_SN_Unet(nn.Module):
 
-    def __init__(self, in_channels, out_channels,distortion_probabilty,feature_num,SN=False,Distortion=False,mid_channels=None,):
+    def __init__(self, in_channels, out_channels,distortion_probabilty=0,feature_num=0,SN=False,Distortion=False,mid_channels=None,):
         super().__init__()
         if SN and not Distortion:
           if not mid_channels:
@@ -58,7 +57,7 @@ class DoubleConv_BFMD_SN_Unet(nn.Module):
 class Down(nn.Module):
     """Downscaling with maxpool then double conv"""
 
-    def __init__(self, in_channels, out_channels,distortion_probabilty,feature_num,SN,Distortion):
+    def __init__(self, in_channels, out_channels,SN,Distortion,distortion_probabilty=0,feature_num=0):
         super().__init__()
         self.maxpool_conv = nn.Sequential(
             nn.MaxPool2d(2),
@@ -72,7 +71,7 @@ class Down(nn.Module):
 class Up(nn.Module):
     """Upscaling then double conv"""
 
-    def __init__(self, in_channels, out_channels,distortion_probabilty,feature_num,SN,Distortion):
+    def __init__(self, in_channels, out_channels,SN,Distortion,distortion_probabilty=0,feature_num=0):
         super().__init__()
         self.up = nn.ConvTranspose2d(in_channels, in_channels // 2, kernel_size=3, stride=2)
         self.conv = DoubleConv_BFMD_SN_Unet(in_channels, out_channels,distortion_probabilty,feature_num,SN=SN,Distortion=Distortion)
