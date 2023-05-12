@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 
 class Switch_able_Normalization(nn.Module):
-    def __init__(self, num_features, eps=1e-5, momentum=0.997, using_moving_average=True, using_bn=True,
+    def __init__(self, num_features, eps=1e-5, momentum=0.97, using_moving_average=True, using_bn=True,
                  last_gamma=False):
         super(Switch_able_Normalization, self).__init__()
         self.eps = eps
