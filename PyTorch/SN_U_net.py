@@ -28,6 +28,6 @@ class SN_UNet(nn.Module):
         pred = self.outc(x)
         return pred
 
-model = UNet(n_channels=3, n_classes=1)
+model = SN_UNet(n_channels=3, n_classes=1)
 model = model.to(memory_format=torch.channels_last)
 model
