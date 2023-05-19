@@ -85,7 +85,7 @@ for train_step in (range(NUM_EPOCHS)):
 		(x, y) = (x.to(device), y.to(device))
 		# perform a forward pass and calculate the training loss
 		pred = model(x)		
-		y = y[:,:,0:510,0:510]
+		#y = y[:,:,0:NUM,0:NUM]
 		loss = lossFunc(pred, y)
 		# reset any previously accumulated gradients, then back-pro
 		opt.zero_grad()
@@ -98,7 +98,7 @@ for train_step in (range(NUM_EPOCHS)):
 		for (x, y) in valLoader:
 			(x, y) = (x.to(device), y.to(device))
 			pred = model(x)
-			y = y[:,:,0:510,0:510]
+			#y = y[:,:,0:NUM,0:NUM]
 			total_TestLoss += lossFunc(pred, y)
 	avgTrainLoss = total_TrainLoss / trainSteps
 	avgTestLoss = total_TestLoss / testSteps
