@@ -14,12 +14,12 @@ _give attention where the information present on the spatil axis, or with other 
 give learn a channel attention map by exploiting the inter-channel relationship of features and use Conv1d instead of MLP to improve computational efficiency_
 ![image](https://github.com/sabrid369/BFMD-SN-U-net/assets/80791539/d70101a8-76ef-4eac-8514-b1de49017b98)
 
-Markup :### Training ###
+# Training 
 You can train with train.py
 Markup : Test
 You can test with test.py
 
-Markup : If you are inspired by our work, please cite the paper
+# If you are inspired by our work, please cite the paper
 @ARTICLE{10097749,
   author={Deari, Sabri and Oksuz, Ilkay and Ulukaya, Sezer},
   journal={IEEE Access}, 
