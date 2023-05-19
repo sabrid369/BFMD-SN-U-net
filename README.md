@@ -9,18 +9,18 @@ The presence of high blood sugar levels damages blood vessels and causes an eye 
 _overcome overfitting problem of the U-net,
 overcome an important challenge of U-net design choice: Which Normalization Type to use. SN-U-net is able to learn which normalization is most useful automatically(Batch,Layer or Instance)_
 
-**We propose a Global Context Informative Convolutional Block Attention Module to : **
+**We propose a Global Context Informative Convolutional Block Attention Module to :**
 _give attention where the information present on the spatil axis, or with other words suppress the noise in the image, and to learn different sizes of information more effectively as it has higher receptive field.(without increasing convolution parameters)
 give learn a channel attention map by exploiting the inter-channel relationship of features and use Conv1d instead of MLP to improve computational efficiency_
 ![image](https://github.com/sabrid369/BFMD-SN-U-net/assets/80791539/d70101a8-76ef-4eac-8514-b1de49017b98)
 
->Training
-> You can train with train.py
->Test
-> You can test with test.py
+Markup : Training
+You can train with train.py
+Markup : Test
+You can test with test.py
 
->If you are inspired by our work, please cite the paper
->@ARTICLE{10097749,
+Markup : If you are inspired by our work, please cite the paper
+@ARTICLE{10097749,
   author={Deari, Sabri and Oksuz, Ilkay and Ulukaya, Sezer},
   journal={IEEE Access}, 
   title={Block Attention and Switchable Normalization Based Deep Learning Framework for Segmentation of Retinal Vessels}, 
