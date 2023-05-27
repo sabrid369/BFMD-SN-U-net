@@ -35,7 +35,7 @@ Test_Loss=[]
 
 
 model = BFMD_SN_UNet_with_GCI_CBAM(n_channels=3, n_classes=1)
-model.load_state_dict(torch.load(PATH))
+model.load_state_dict(torch.load(""))
 model.to(device)
 model.eval()
 
