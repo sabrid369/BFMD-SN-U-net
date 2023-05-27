@@ -18,7 +18,7 @@ _to learn a channel attention map by exploiting the inter-channel relationship o
 
 # PyTorch Training 
 You can start with data_augmentation_and_zero_padding.py and then train.py
-# Pytorch Test
+# PyTorch Test
 You can test with test.py
 
 # Keras Training 
