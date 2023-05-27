@@ -4,9 +4,6 @@ import numpy as np
 import keras
 import tensorflow as tf
 import glob
-import math
-from sklearn.metrics import confusion_matrix,roc_auc_score,accuracy_score,recall_score
-from BFMD_SN_UNet_gci_cbam import *
 
 Imagelist_TEST = []
 Masklist_TEST =  []
@@ -52,10 +49,10 @@ LabelsTest = np.array(LabelsL)
 ImagesTest = (ImagesTest.astype('float16') / 255.).astype('float16')
 LabelsTest = (LabelsTest.astype('float16') / 255.).astype('float16')
 LabelsTest =  np.expand_dims(LabelsTest, axis=3)
+import math
+from sklearn.metrics import confusion_matrix,roc_auc_score,accuracy_score,recall_score
 
 
-model = BFMD_SN_UNet_gci_cbam(input_shape=(1008,1008,3))
-model.load_weights("")
 
 y_test =  LabelsTest
 y_test=crop_to_shape(y_test,(len(y_test), 960, 999, 1))
