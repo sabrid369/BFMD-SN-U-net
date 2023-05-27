@@ -59,7 +59,7 @@ Labels =  np.expand_dims(Labels, axis=3)
 
 X_Train , X_Test , Y_Train , Y_Test = train_test_split(Images,Labels,test_size = 0.1 , random_state = 369,shuffle=True)
 
-model = BFMD_SN_UNet_gci_cbam()
+model = BFMD_SN_UNet_gci_cbam(input_shape=(592,592,3))
 model.compile(optimizer="adam", loss='binary_crossentropy', metrics=['accuracy'])
 checkpoint = keras.callbacks.ModelCheckpoint('_{epoch:04d}.h5',save_best_only=True,monitor="val_accuracy") 
 
