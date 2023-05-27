@@ -56,7 +56,7 @@ def UNet(f=16,kernel_size=(3,3),padding = 'same',strides = 1):
 
 
     dc2 = Conv2DTranspose(f*2, (3, 3), strides=(2, 2), padding="same")(uc3)
-    uc2 = concatenate([dc2, c2_])
+    uc2 = concatenate([dc2, c2])
     
     
 
