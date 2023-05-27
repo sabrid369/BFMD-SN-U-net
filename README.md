@@ -12,8 +12,8 @@ _overcome overfitting problem of the U-net,
 overcome an important challenge of U-net design choice: Which Normalization Type to use. SN-U-net is able to learn which normalization is most useful automatically(Batch,Layer or Instance)_
 
 **We propose a Global Context Informative Convolutional Block Attention Module to :**
-_give attention where the information present on the spatil axis, or with other words suppress the noise in the image, and to learn different sizes of information more effectively as it has higher receptive field.(without increasing convolution parameters)
-give learn a channel attention map by exploiting the inter-channel relationship of features and use Conv1d instead of MLP to improve computational efficiency_
+_give attention where the information present on the spatil axis, or with other words suppress the noise in the image, and to learn different sizes of information more effectively as it has higher receptive field.(without increasing convolution parameters)_
+_learn a channel attention map by exploiting the inter-channel relationship of features and use Conv1d instead of MLP to improve computational efficiency_
 
 # PyTorch Training 
 You can start with data_augmentation_and_zero_padding.py and then train.py
