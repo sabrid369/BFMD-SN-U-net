@@ -7,8 +7,8 @@ The presence of high blood sugar levels damages blood vessels and causes an eye 
 ![image](https://github.com/sabrid369/BFMD-SN-U-net/assets/80791539/62b50b84-c365-44c6-8bd7-b6557fd3085b)
 
 # BFMD SN U-net with GCI-CBAM
-**We propose BFMD SN-Unet to :**
-_overcome overfitting problem of the U-net,
+**We propose BFMD SN-Unet :**
+_to overcome overfitting problem of the U-net,
 overcome an important challenge of U-net design choice: Which Normalization Type to use. SN-U-net is able to learn which normalization is most useful automatically(Batch,Layer or Instance)_
 
 **We propose a Global Context Informative Convolutional Block Attention Module :**
@@ -26,7 +26,7 @@ You can start with train.py
 # Keras Test
 You can test with test.py
 
-# If you are inspired by our work, please cite the this paper
+# If you are inspired by our work, please cite this paper
 @ARTICLE{10097749,
   author={Deari, Sabri and Oksuz, Ilkay and Ulukaya, Sezer},
   journal={IEEE Access}, 
