@@ -8,9 +8,8 @@ from switch_able_norm_2d import *
 from block_feature_map_distortion import *
 
 f=[16,32,64,128,256]
-input_size=(592,592, 3) 
 
-def BFMD_SN_UNet(f=16,kernel_size=(3,3),padding = 'same',strides = 1):
+def BFMD_SN_UNet(input_shape,f=16,kernel_size=(3,3),padding = 'same',strides = 1):
 
     x = Input(input_size)
     c1 = Conv2D(f, (3, 3), activation=None, padding="same")(x)
