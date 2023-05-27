@@ -5,7 +5,7 @@ import glob
 import imgaug as ia
 import imgaug.augmenters as iaa
 import random
-
+from PIL import Image
 
 
 Imagelist=[]
