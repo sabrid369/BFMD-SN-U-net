@@ -108,4 +108,4 @@ for train_step in (range(NUM_EPOCHS)):
 	print("Train loss: {:.6f}, Test loss: {:.4f}".format(avgTrainLoss, avgTestLoss))
 endTime = time.time()
 print("Total Time: {:.2f}s".format(endTime - startTime))
-
+torch.save(model.state_dict(), "")
