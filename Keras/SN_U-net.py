@@ -7,11 +7,11 @@ from keras.layers import Input, Conv2D, MaxPooling2D,Conv2DTranspose,concatenate
 from switch_able_norm_2d import * 
 
 f=[16,32,64,128,256]
-input_size=(592,592, 3) 
 
-def SN_UNet(f=16,kernel_size=(3,3),padding = 'same',strides = 1):
 
-    x = Input(input_size)
+def SN_UNet(input_shape,f=16,kernel_size=(3,3),padding = 'same',strides = 1):
+
+    x = Input(input_shape)
     c1 = Conv2D(f, (3, 3), activation=None, padding="same")(x)
     c1 = SwitchNormalization()(c1)
     c1 = Activation('relu')(c1)
