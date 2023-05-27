@@ -28,7 +28,7 @@ gndPaths = sorted(list(paths.list_files(GND_DATASET_PATH)))
 testDS = SegmentationDataset(imagePaths=imagePaths, gndPaths=gndPaths,transforms=transforms)
 print(f" There is {len(testDS)} examples in the training set...")
 
-testLoader = DataLoader(testDS, shuffle=True,batch_size=4,num_workers=os.cpu_count())
+testLoader = DataLoader(testDS, shuffle=False,batch_size=4,num_workers=os.cpu_count())
 
 lossFunc = BCEWithLogitsLoss()
 Test_Loss=[]
