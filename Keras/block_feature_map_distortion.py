@@ -1,6 +1,7 @@
+"""https://github.com/tfwcn/tensorflow2-disout/blob/master/disout_tf2.py was used to a great extent."""
+""" Tensorflow implementation of Block Feature Map Distortion Layer """
+
 import tensorflow as tf
-
-
 class BFMD(tf.keras.layers.Layer):
     def __init__(self, dist_prob, block_size=5, alpha=1, **kwargs):
         super(BFMD, self).__init__(**kwargs)
