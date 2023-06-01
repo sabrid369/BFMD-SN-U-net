@@ -31,10 +31,10 @@ def GCI_CBAM(input):
 
     # First vein of GCI CBAM
     # channel attention
-    avg_pool1 = shared_conv_1(avg_pool1)
+    avg_pool1 = shared_conv_1(avg_pool)
     avg_pool1 = Lambda(unsqueeze)(avg_pool1)
     avg_pool1 = Permute((2, 3, 1))(avg_pool1)
-    max_pool1 = shared_conv_1(max_pool1)
+    max_pool1 = shared_conv_1(max_pool)
     max_pool1 = Lambda(unsqueeze)(max_pool1)
     max_pool1 = Permute((2, 3, 1))(max_pool1)
     channel_feature1 = Add()([avg_pool1, max_pool1])
@@ -51,10 +51,10 @@ def GCI_CBAM(input):
 
     # Second vein of GCI CBAM
     # channel attention
-    avg_pool2 = shared_conv_2(avg_pool2)
+    avg_pool2 = shared_conv_2(avg_pool)
     avg_pool2 = Lambda(unsqueeze)(avg_pool2)
     avg_pool2 = Permute((2, 3, 1))(avg_pool2)
-    max_pool2 = shared_conv_2(max_pool2)
+    max_pool2 = shared_conv_2(max_pool)
     max_pool2 = Lambda(unsqueeze)(max_pool2)
     max_pool2 = Permute((2, 3, 1))(max_pool2)
     channel_feature2 = Add()([avg_pool2, max_pool2])
@@ -72,10 +72,10 @@ def GCI_CBAM(input):
  
     # Third vein of GCI CBAM
     # channel attention
-    avg_pool3 = shared_conv_3(avg_pool3)
+    avg_pool3 = shared_conv_3(avg_pool)
     avg_pool3 = Lambda(unsqueeze)(avg_pool3)
     avg_pool3 = Permute((2, 3, 1))(avg_pool3)
-    max_pool3 = shared_conv_3(max_pool3)
+    max_pool3 = shared_conv_3(max_pool)
     max_pool3 = Lambda(unsqueeze)(max_pool3)
     max_pool3 = Permute((2, 3, 1))(max_pool3)
     channel_feature3 = Add()([avg_pool3, max_pool3])
@@ -92,10 +92,10 @@ def GCI_CBAM(input):
 
     # Fourth vein of GCI CBAM
     # channel attention
-    avg_pool4 = shared_conv_4(avg_pool4)
+    avg_pool4 = shared_conv_4(avg_pool)
     avg_pool4 = Lambda(unsqueeze)(avg_pool4)
     avg_pool4 = Permute((2, 3, 1))(avg_pool4)
-    max_pool4 = shared_conv_4(max_pool4)
+    max_pool4 = shared_conv_4(max_pool)
     max_pool4 = Lambda(unsqueeze)(max_pool4)
     max_pool4 = Permute((2, 3, 1))(max_pool4)
     channel_feature4 = Add()([avg_pool4, max_pool4])
