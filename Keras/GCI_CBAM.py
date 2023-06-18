@@ -1,6 +1,6 @@
 import keras
 import tensorflow as tf
-from keras.layers import multiply, Permute, Concatenate,Lambda,AveragePooling2D,MaxPooling2D,AveragePooling2D,GlobalAveragePooling2D,Add,Conv2D,Conv1D
+from keras.layers import multiply, Permute, Concatenate,Lambda,AveragePooling2D,MaxPooling2D,AveragePooling2D,GlobalAveragePooling2D,Add,Conv2D,Conv1D,GlobalMaxPooling2D,Reshape
 from keras import backend as K
 
 
