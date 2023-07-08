@@ -1,13 +1,14 @@
 
 """https://github.com/titu1994/keras-switchnorm/blob/master/switchnorm.py was used to a great extent."""
 from keras.engine import Layer, InputSpec
-from keras.layers import InputSpec
+#from keras.layers import InputSpec
 from keras import initializers
 from keras import regularizers
 from keras import constraints
 from keras import backend as K
 
-from keras.utils.generic_utils import get_custom_objects
+#from keras.utils.generic_utils import get_custom_objects
+from tensorflow.python.keras.utils.generic_utils import get_custom_objects
 
 from keras.layers import BatchNormalization
 
@@ -157,13 +158,13 @@ class SwitchNormalization(Layer):
                 # sample variance - unbiased estimator of population variance
                 variance_batch_reshaped *= sample_size / (sample_size - (1.0 + self.epsilon))
 
-            self.add_update([K.moving_average_update(self.moving_mean,
+            self.add_update([[K.moving_average_update(self.moving_mean,
                                                      mean_batch_reshaped,
                                                      self.momentum),
                              K.moving_average_update(self.moving_variance,
                                                      variance_batch_reshaped,
                                                      self.momentum)],
-                            inputs)
+                            inputs])
 
             return normalize_func(mean_batch, variance_batch)
 
