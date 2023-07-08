@@ -44,8 +44,8 @@ for (x, y) in testLoader:
     with torch.no_grad():
         (x, y) = (x.to(device), y.to(device))
         pred = model(x)
-        pred = np.array(pred)
-        y = np.array(y)
+        pred = pred.detach().cpu().np()
+        y =  y.detach().cpu().np()
 
         pred = crop_to_shape(pred,(len(pred),960,999,1))
         y = crop_to_shape(y,(len(y),960,999,1))
