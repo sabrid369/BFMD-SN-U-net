@@ -26,6 +26,9 @@ You can start with train.py
 # Keras Test
 You can test with test.py
 
+# Keras  Version
+Keras==2.12.0
+
 # If you are inspired by our work, please cite this paper
 @ARTICLE{10097749,
   author={Deari, Sabri and Oksuz, Ilkay and Ulukaya, Sezer},
